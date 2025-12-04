@@ -1,10 +1,13 @@
+# test_main.py
+
 import pytest
 from unittest.mock import patch
 from io import StringIO
 import main
 
+# ----------------------
 # Тесты для ask_for_age()
-
+# ----------------------
 @pytest.mark.parametrize(
     "age_input, expected_output",
     [
@@ -21,9 +24,9 @@ def test_ask_for_age(age_input, expected_output):
             main.ask_for_age()
             assert fake_out.getvalue() == expected_output
 
-
+# ----------------------
 # Тесты для check_password()
-
+# ----------------------
 @pytest.mark.parametrize(
     "password_input, expected_output",
     [
@@ -39,9 +42,9 @@ def test_check_password(password_input, expected_output):
             main.check_password()
             assert fake_out.getvalue() == expected_output
 
-
+# ----------------------
 # Тесты для check_temperature()
-
+# ----------------------
 @pytest.mark.parametrize(
     "temp_input, expected_output",
     [
@@ -61,9 +64,9 @@ def test_check_temperature(temp_input, expected_output):
             main.check_temperature()
             assert fake_out.getvalue() == expected_output
 
-
+# ----------------------
 # Тесты для check_login_and_password()
-
+# ----------------------
 @pytest.mark.parametrize(
     "inputs, expected_output",
     [
