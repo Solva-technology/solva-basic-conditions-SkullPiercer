@@ -3,7 +3,7 @@
 import pytest
 from unittest.mock import patch
 from io import StringIO
-from src import main
+from src.main import ask_for_age, check_password, check_login_and_password, check_temperature
 # ----------------------
 # Тесты для ask_for_age()
 # ----------------------
@@ -20,7 +20,7 @@ from src import main
 def test_ask_for_age(age_input, expected_output):
     with patch('builtins.input', return_value=age_input):
         with patch('sys.stdout', new=StringIO()) as fake_out:
-            main.ask_for_age()
+            ask_for_age()
             assert fake_out.getvalue() == expected_output
 
 # ----------------------
@@ -38,7 +38,7 @@ def test_ask_for_age(age_input, expected_output):
 def test_check_password(password_input, expected_output):
     with patch('builtins.input', return_value=password_input):
         with patch('sys.stdout', new=StringIO()) as fake_out:
-            main.check_password()
+            check_password()
             assert fake_out.getvalue() == expected_output
 
 # ----------------------
@@ -60,7 +60,7 @@ def test_check_password(password_input, expected_output):
 def test_check_temperature(temp_input, expected_output):
     with patch('builtins.input', return_value=temp_input):
         with patch('sys.stdout', new=StringIO()) as fake_out:
-            main.check_temperature()
+            check_temperature()
             assert fake_out.getvalue() == expected_output
 
 # ----------------------
@@ -79,5 +79,5 @@ def test_check_temperature(temp_input, expected_output):
 def test_check_login_and_password(inputs, expected_output):
     with patch('builtins.input', side_effect=inputs):
         with patch('sys.stdout', new=StringIO()) as fake_out:
-            main.check_login_and_password()
+            check_login_and_password()
             assert fake_out.getvalue() == expected_output
