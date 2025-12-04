@@ -6,7 +6,12 @@ def ask_for_age():
     В противном случае — "Вы несовершеннолетний".
     """
     # TODO: Напишите ваш код здесь
-    pass
+    age = int(input())
+    if age >= 18:
+        print('Вы совершеннолетний')
+    else:
+        print('Вы несовершеннолетний')
+
 
 def check_password():
     """
@@ -16,7 +21,11 @@ def check_password():
     Иначе — "Пароль неверный".
     """
     # TODO: Напишите ваш код здесь
-    pass
+    password = input()
+    if password == 'secret':
+        print('Пароль верный')
+    else:
+        print('Пароль неверный')
 
 def check_temperature():
     """
@@ -26,8 +35,14 @@ def check_temperature():
     - Если температура от 15 до 25 (включительно), выведите "Тепло".
     - Если температура выше 25, выведите "Жарко".
     """
-    # TODO: Напишите ваш код здесь
-    pass
+    temp = float(input("Введите температуру: "))
+
+    if temp < 15:
+        print("Холодно")
+    elif 15 <= temp <= 25:
+        print("Тепло")
+    else:
+        print("Жарко")
 
 def check_login_and_password():
     """
@@ -37,7 +52,13 @@ def check_login_and_password():
     В противном случае — "Доступ запрещен".
     """
     # TODO: Напишите ваш код здесь
-    pass
+    login = input("Введите логин: ")
+    password = input("Введите пароль: ")
+
+    if login == "admin" and password == "password123":
+        print("Доступ разрешен")
+    else:
+        print("Доступ запрещен")
 
 if __name__ == '__main__':
     ask_for_age()
