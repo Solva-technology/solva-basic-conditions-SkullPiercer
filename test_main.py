@@ -3,8 +3,7 @@
 import pytest
 from unittest.mock import patch
 from io import StringIO
-import main
-
+from src import main
 # ----------------------
 # Тесты для ask_for_age()
 # ----------------------
