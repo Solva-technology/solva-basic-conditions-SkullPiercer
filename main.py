@@ -60,8 +60,8 @@ def check_login_and_password():
     else:
         print("Доступ запрещен")
 
-if __name__ == '__main__':
-    ask_for_age()
-    check_password()
-    check_temperature()
-    check_login_and_password()
+# if __name__ == '__main__':
+#     ask_for_age()
+#     check_password()
+#     check_temperature()
+#     check_login_and_password()
